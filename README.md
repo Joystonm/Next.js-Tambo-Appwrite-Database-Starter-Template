@@ -1,0 +1,45 @@
+# Tambo + Appwrite Database Template
+
+A minimal Next.js template demonstrating AI-powered database operations using Tambo and Appwrite Database.
+
+
+
+## Prerequisites
+
+- Node.js 18+
+- Appwrite project with Database enabled
+- Appwrite API key with Database permissions
+
+## Setup
+
+1. **Clone and install**
+   ```bash
+   git clone <repo-url>
+   cd tambo-appwrite-db-template
+   npm install
+   ```
+
+2. **Configure Appwrite**
+   Follow the detailed setup guide in [appwrite.md](./appwrite.md)
+
+3. **Run the app**
+   ```bash
+   npm run dev
+   ```
+
+## What's Included
+
+- **Next.js 14** - App Router with TypeScript
+- **Tambo** - AI chat interface with tool integration
+- **Appwrite Database** - Document storage and retrieval
+- **Minimal UI** - Clean, responsive design
+- **Two AI Tools** - Create and list notes via natural language
+
+## Usage
+
+Try these prompts:
+- "Add a note called 'Ship Tambo template'"
+- "Show all notes"
+- "Create a note about meeting tomorrow"
+
+The AI will automatically create and retrieve notes from your Appwrite database.
