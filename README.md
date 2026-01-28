@@ -15,7 +15,6 @@ A Next.js starter template featuring AI-powered database operations with Tambo's
 1. **Clone and install**
    ```bash
    git clone https://github.com/Joystonm/Next.js-Tambo-Appwrite-Database-Starter-Template.git
-   cd tambo-appwrite-db-template
    npm install
    ```
 
