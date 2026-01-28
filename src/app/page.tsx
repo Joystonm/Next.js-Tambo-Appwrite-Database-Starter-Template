@@ -38,7 +38,7 @@ function HomePage() {
   return (
     <div className="container">
       <header>
-        <h1>Tambo + Appwrite Database Starter</h1>
+        <h1>Next.js + Tambo + Appwrite Database Starter</h1>
         <p>AI-powered note management with Appwrite Database</p>
       </header>
 
