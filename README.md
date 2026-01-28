@@ -1,6 +1,6 @@
-# Tambo + Appwrite Database Template
+# Next.js+ Tambo + Appwrite Database Template
 
-A minimal Next.js template demonstrating AI-powered database operations using Tambo and Appwrite Database.
+A Next.js starter template featuring AI-powered database operations with Tambo's intelligent chat interface and Appwrite's robust database backend. Build conversational applications that can create, retrieve, and manage data through natural language interactions.
 
 
 
