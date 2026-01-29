@@ -40,9 +40,6 @@ A Next.js starter template featuring AI-powered database operations with Tambo's
 - **Prisma** - Type-safe database client
 - **SQLite** - Local file-based database
 - **Automated Setup** - CLI-based database setup
-- **No Authentication** - Direct database access for development
-- **Minimal UI** - Clean, responsive design
-- **Two AI Tools** - Create and list notes via natural language
 
 ## Usage
 
@@ -53,24 +50,3 @@ Try these prompts:
 
 The AI will automatically create and retrieve notes from your SQLite database.
 
-## Architecture
-
-### Database Schema
-- **Database**: SQLite (`prisma/dev.db`)
-- **Table**: `Note`
-- **Fields**: `id` (String), `note` (String), `content` (String), `createdAt` (DateTime)
-
-### No Authentication
-This template intentionally excludes:
-- User login/signup
-- Session management
-- User-specific permissions
-
-The running application requires no login and works directly with the database.
-
-## Development Notes
-
-- Database is stored locally in `prisma/dev.db`
-- Schema changes should be made in `prisma/schema.prisma`
-- Run `npm run db:push` after schema changes
-- Prisma Client is automatically generated
