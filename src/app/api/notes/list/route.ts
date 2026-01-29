@@ -6,7 +6,9 @@ export async function GET() {
     const notes = await prisma.note.findMany({
       orderBy: { createdAt: 'desc' }
     });
-    return NextResponse.json(notes);
+    
+    const notesList = notes.map(note => `${note.note} (${note.createdAt.toLocaleDateString()})`).join('\n');
+    return NextResponse.json({ message: notesList });
   } catch (error) {
     return NextResponse.json({ error: 'Failed to fetch notes' }, { status: 500 });
   }

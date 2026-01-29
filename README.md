@@ -1,27 +1,34 @@
-# Next.js+ Tambo + Appwrite Database Template
+# Next.js + Tambo + Prisma Database Template
 
-A Next.js starter template featuring AI-powered database operations with Tambo's intelligent chat interface and Appwrite's robust database backend. Build conversational applications that can create, retrieve, and manage data through natural language interactions.
-
-
+A Next.js starter template featuring AI-powered database operations with Tambo's intelligent chat interface and Prisma's type-safe database client with SQLite.
 
 ## Prerequisites
 
 - Node.js 18+
-- Appwrite project with Database enabled
-- Appwrite API key with Database permissions
+- Tambo API key
 
-## Setup
+## Quick Setup
 
 1. **Clone and install**
    ```bash
    git clone https://github.com/Joystonm/Next.js-Tambo-Appwrite-Database-Starter-Template.git
+   cd Next.js-Tambo-Appwrite-Database-Starter-Template
    npm install
    ```
 
-2. **Configure Appwrite**
-   Follow the detailed setup guide in [appwrite.md](./appwrite.md)
+2. **Configure environment**
+   ```bash
+   cp .env.example .env.local
+   ```
+   Edit `.env.local` with your Tambo API key:
+   - `NEXT_PUBLIC_TAMBO_API_KEY`: Your Tambo API key
 
-3. **Run the app**
+3. **Setup database**
+   ```bash
+   npm run db:push
+   ```
+
+4. **Start the application**
    ```bash
    npm run dev
    ```
@@ -30,15 +37,40 @@ A Next.js starter template featuring AI-powered database operations with Tambo's
 
 - **Next.js 14** - App Router with TypeScript
 - **Tambo** - AI chat interface with tool integration
-- **Appwrite Database** - Document storage and retrieval
+- **Prisma** - Type-safe database client
+- **SQLite** - Local file-based database
+- **Automated Setup** - CLI-based database setup
+- **No Authentication** - Direct database access for development
 - **Minimal UI** - Clean, responsive design
 - **Two AI Tools** - Create and list notes via natural language
 
 ## Usage
 
 Try these prompts:
-- "Add a note called 'Ship Tambo template'"
+- "Create a note called Ship Tambo template with content Ready to deploy"
 - "Show all notes"
-- "Create a note about meeting tomorrow"
+- "Add a note about meeting tomorrow with details Discuss project roadmap"
 
-The AI will automatically create and retrieve notes from your Appwrite database.
+The AI will automatically create and retrieve notes from your SQLite database.
+
+## Architecture
+
+### Database Schema
+- **Database**: SQLite (`prisma/dev.db`)
+- **Table**: `Note`
+- **Fields**: `id` (String), `note` (String), `content` (String), `createdAt` (DateTime)
+
+### No Authentication
+This template intentionally excludes:
+- User login/signup
+- Session management
+- User-specific permissions
+
+The running application requires no login and works directly with the database.
+
+## Development Notes
+
+- Database is stored locally in `prisma/dev.db`
+- Schema changes should be made in `prisma/schema.prisma`
+- Run `npm run db:push` after schema changes
+- Prisma Client is automatically generated
